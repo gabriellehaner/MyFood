@@ -25,6 +25,10 @@ class Cadastro : Fragment(R.layout.cadastro_fragment) {
 
 
 
+//            if (DadosReceita != ""){
+//                return true
+//
+//            }
             findNavController().navigate(R.id.cadastro_para_home2)
         }
 
