@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacao"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.myfood.Home"
+        android:label="Home"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/home2_para_cadastro"
+            app:destination="@id/cadastro" />
+        <action
+            android:id="@+id/home2_para_consultar"
+            app:destination="@id/consultar" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastro"
+        android:name="com.example.myfood.Cadastro"
+        android:label="cadastro_fragment"
+        tools:layout="@layout/cadastro_fragment" >
+        <action
+            android:id="@+id/cadastro_para_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/consultar"
+        android:name="com.example.myfood.Consultar"
+        android:label="consultar_fragment"
+        tools:layout="@layout/consultar_fragment" >
+        <action
+            android:id="@+id/consultar_para_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/consultar_para_detalhes"
+            app:destination="@id/detalhes" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhes"
+        android:name="com.example.myfood.Detalhes"
+        android:label="Detalhes"
+        tools:layout="@layout/detalhes_fragment">
+        <action
+            android:id="@+id/detalhes_para_consultar"
+            app:destination="@id/consultar" />
+    </fragment>
+</navigation>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/laranjapadrao"
+    tools:context=".Cadastro">
+
+    <EditText
+        android:id="@+id/tituloreceita"
+        android:layout_width="380dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/arredondar"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Título da Receita"
+        android:inputType="text|textMultiLine"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/temporeceita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="243dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/myfood"
+        app:layout_constraintBottom_toTopOf="@+id/tituloreceita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textopreparo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/arredondar"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Modo de Preparo"
+        android:inputType="text|textMultiLine"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/botaocadastrarreceita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoingredientes"
+        tools:ignore="RtlCompat" />
+
+    <EditText
+        android:id="@+id/textoingredientes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/arredondar"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Ingredientes"
+        android:inputType="text|textMultiLine"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/textopreparo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temporeceita"
+        tools:ignore="RtlCompat" />
+
+    <Button
+        android:id="@+id/botaocadastrarreceita"
+        style="@style/botaoredondo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/arredondarbotao"
+        android:text="Finalizar Cadastro"
+        android:textColor="@color/marromcorbotao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textopreparo" />
+
+    <EditText
+        android:id="@+id/temporeceita"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/arredondar"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Tempo de Preparo"
+        android:inputType="time"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/textoingredientes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloreceita"
+        tools:ignore="RtlCompat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
