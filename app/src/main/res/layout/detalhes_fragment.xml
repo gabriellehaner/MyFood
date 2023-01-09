@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/laranjapadrao"
+    android:layout_height="match_parent">
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/laranjapadrao"
@@ -44,7 +54,9 @@
             android:background="@drawable/arredondar"
             android:ems="10"
             android:gravity="top"
+            android:textColorHint="@color/marromcorbotao"
             android:hint="Título da Receita"
+            android:textColor="@color/marromcorbotao"
             android:textStyle="bold"
             android:inputType="text|textMultiLine"
             android:textAlignment="center"
@@ -62,7 +74,9 @@
         android:background="@drawable/arredondar"
         android:ems="10"
         android:gravity="top"
+        android:textColorHint="@color/marromcorbotao"
         android:hint="Tempo de Preparo"
+        android:textColor="@color/marromcorbotao"
         android:inputType="text|textMultiLine"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,8 +94,8 @@
         android:ems="10"
         android:gravity="top"
         android:hint="Modo de Preparo"
-        android:inputType="text|textMultiLine"
-
+        android:textColorHint="@color/marromcorbotao"
+        android:textColor="@color/marromcorbotao"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -98,8 +112,8 @@
         android:ems="10"
         android:gravity="top"
         android:hint="Ingredientes"
-        android:inputType="text|textMultiLine"
-
+        android:textColorHint="@color/marromcorbotao"
+        android:textColor="@color/marromcorbotao"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -137,5 +151,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
 
 
