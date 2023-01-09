@@ -16,29 +16,23 @@ class Cadastro : Fragment(R.layout.cadastro_fragment) {
         super.onViewCreated(view, savedInstanceState)
 
 
-
         view.findViewById<Button>(R.id.botaocadastrarreceita).setOnClickListener {
             DadosReceita.titulo = tituloreceita.text.toString()
             DadosReceita.tempo = temporeceita.text.toString()
             DadosReceita.ingredientes = textoingredientes.text.toString()
             DadosReceita.mododepreparo = textopreparo.text.toString()
 
-
-
-//            if (DadosReceita != ""){
-//                return true
-//
-//            }
+            if (tituloreceita.text.isEmpty()){
+                tituloreceita.setError("Preencha corretamente todos os campos")
+            } else if (temporeceita.text.isEmpty()){
+                temporeceita.setError("Preencha corretamente todos os campos")
+            } else if (textoingredientes.text.isEmpty()){
+                textoingredientes.setError("Preencha corretamente todos os campos")
+            } else if (textopreparo.text.isEmpty()){
+                textopreparo.setError("Preencha corretamente todos os campos")
+            } else
             findNavController().navigate(R.id.cadastro_para_home2)
         }
-
-
-
-
-//        view.findViewById<Button>(R.id.botaocadastrarreceita).setOnClickListener {
-//            findNavController().navigate(R.id.cadastro_para_home2)
-//        }
-
 
     }
 

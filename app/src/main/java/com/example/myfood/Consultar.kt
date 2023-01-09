@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.consultar_fragment.*
 import kotlinx.android.synthetic.main.consultar_fragment.view.*
+import kotlinx.android.synthetic.main.itens_lista.*
 
 
 class Consultar : Fragment(R.layout.consultar_fragment) {
@@ -30,6 +31,7 @@ class Consultar : Fragment(R.layout.consultar_fragment) {
 
         initAdapter()
         populateItems()
+//        clickCard()
     }
 
     private fun populateItems() {
@@ -39,11 +41,18 @@ class Consultar : Fragment(R.layout.consultar_fragment) {
 
     private fun initAdapter() {
 
-        profileAdapter = Adapter()
+        profileAdapter = Adapter(
+            { clickCard() }
+        )
 
         recyclerlista.layoutManager = LinearLayoutManager(requireContext())
         recyclerlista.adapter = profileAdapter
 
-
+            //cli
     }
+
+    private fun clickCard() {
+        findNavController().navigate(R.id.consultar_para_detalhes)
+    }
+
 }

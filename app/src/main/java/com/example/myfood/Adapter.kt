@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.itens_lista.view.*
 
-class Adapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class Adapter (private val onClicked: () -> Unit): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     private lateinit var itens: List<DadosReceita>
 
@@ -23,7 +23,7 @@ class Adapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
         when (holder){
             is ReceitaViewHolder -> {
-                holder.bind(itens[position])
+                holder.bind(itens[position], onClicked)
 //                holder.cardView.setOnClickListener{
 //                    clickCategoria.clickCategoria(categoria)
 //                }
@@ -54,10 +54,13 @@ class Adapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 //        val cardView = itemView.cardView
 
 
-        fun bind(DadosReceita: DadosReceita){
+        fun bind(DadosReceita: DadosReceita, onClicked: () -> Unit){
             dadosTitulo.text = DadosReceita.titulo
             dadosTempo.text = DadosReceita.tempo
 
+            itemView.setOnClickListener {
+                onClicked()
+            }
         }
 
     }
