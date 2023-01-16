@@ -33,9 +33,6 @@ class Detalhes : Fragment(R.layout.detalhes_fragment) {
             findNavController().navigate(R.id.detalhes_para_consultar)
         }
 
-
-
-
     }
 
 }
