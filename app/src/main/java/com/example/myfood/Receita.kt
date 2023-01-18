@@ -1,7 +1,10 @@
+package com.example.myfood
 
-object DadosReceita {
-    var titulo: String = ""
-    var tempo: String = ""
-    var ingredientes: String = ""
-    var mododepreparo: String = ""
-}
+import java.io.Serializable
+
+data class Receita(
+    val titulo: String,
+    val tempo: String,
+    val ingredientes: String,
+    val mododepreparo: String
+) : Serializable

@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android-extensions'
     id 'org.jetbrains.kotlin.android'
-    id 'androidx.navigation.safeargs.kotlin' version '2.5.3' apply false
+    id 'androidx.navigation.safeargs'
 }
 
 android {

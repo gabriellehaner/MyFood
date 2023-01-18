@@ -1,52 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/laranjapadrao"
-    android:layout_height="match_parent">
-
-
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/laranjapadrao"
+    android:background="@color/laranjapadrao">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/laranjapadrao"
         tools:context=".Detalhes">
 
-    <Button
-        android:id="@+id/botaocvoltarhome_detalhes"
-        style="@style/botaoredondo"
-        android:layout_width="326dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/arredondarbotao"
-        android:text="Voltar"
-        android:textColor="@color/marromcorbotao"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recebermododepreparo" />
+        <Button
+            android:id="@+id/botaocvoltarhome_detalhes"
+            style="@style/botaoredondo"
+            android:layout_width="326dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/arredondarbotao"
+            android:text="Deletar Receita"
+            android:textColor="@color/marromcorbotao"
+            app:layout_constraintBottom_toTopOf="@+id/botao_atualizar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recebermododepreparo" />
+
+        <Button
+            android:id="@+id/botao_atualizar"
+            style="@style/botaoredondo"
+            android:layout_width="326dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/arredondarbotao"
+            android:text="Atualizar Receita"
+            android:textColor="@color/marromcorbotao"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recebermododepreparo" />
 
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="213dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/myfood"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="213dp"
+            android:layout_height="97dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/myfood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
-        <TextView
+        <EditText
             android:id="@+id/recebertituloreceita"
             android:layout_width="326dp"
             android:layout_height="47dp"
@@ -54,100 +68,100 @@
             android:background="@drawable/arredondar"
             android:ems="10"
             android:gravity="top"
-            android:textColorHint="@color/marromcorbotao"
             android:hint="Título da Receita"
-            android:textColor="@color/marromcorbotao"
-            android:textStyle="bold"
             android:inputType="text|textMultiLine"
             android:textAlignment="center"
+            android:textColor="@color/marromcorbotao"
+            android:textColorHint="@color/marromcorbotao"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
             tools:ignore="RtlCompat" />
 
-    <TextView
-        android:id="@+id/recebertempodepreparo"
-        android:layout_width="326dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/arredondar"
-        android:ems="10"
-        android:gravity="top"
-        android:textColorHint="@color/marromcorbotao"
-        android:hint="Tempo de Preparo"
-        android:textColor="@color/marromcorbotao"
-        android:inputType="text|textMultiLine"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recebertituloreceita"
-        tools:ignore="RtlCompat" />
+        <EditText
+            android:id="@+id/recebertempodepreparo"
+            android:layout_width="326dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/arredondar"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="Tempo de Preparo"
+            android:inputType="text|textMultiLine"
+            android:textAlignment="center"
+            android:textColor="@color/marromcorbotao"
+            android:textColorHint="@color/marromcorbotao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recebertituloreceita"
+            tools:ignore="RtlCompat" />
 
-    <TextView
-        android:id="@+id/recebermododepreparo"
-        android:layout_width="326dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/arredondar"
-        android:ems="10"
-        android:gravity="top"
-        android:hint="Modo de Preparo"
-        android:textColorHint="@color/marromcorbotao"
-        android:textColor="@color/marromcorbotao"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:ignore="RtlCompat" />
+        <EditText
+            android:id="@+id/recebermododepreparo"
+            android:layout_width="326dp"
+            android:layout_height="136dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/arredondar"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="Modo de Preparo"
+            android:textAlignment="center"
+            android:textColor="@color/marromcorbotao"
+            android:textColorHint="@color/marromcorbotao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:ignore="RtlCompat" />
 
-    <TextView
-        android:id="@+id/receberinngredientes"
-        android:layout_width="326dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/arredondar"
-        android:ems="10"
-        android:gravity="top"
-        android:hint="Ingredientes"
-        android:textColorHint="@color/marromcorbotao"
-        android:textColor="@color/marromcorbotao"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="RtlCompat" />
+        <EditText
+            android:id="@+id/receberinngredientes"
+            android:layout_width="326dp"
+            android:layout_height="136dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/arredondar"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="Ingredientes"
+            android:textAlignment="center"
+            android:textColor="@color/marromcorbotao"
+            android:textColorHint="@color/marromcorbotao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:ignore="RtlCompat" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Ingredientes:"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recebertempodepreparo" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Ingredientes:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recebertempodepreparo" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Modo de Preparo:"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/receberinngredientes" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Modo de Preparo:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/receberinngredientes" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

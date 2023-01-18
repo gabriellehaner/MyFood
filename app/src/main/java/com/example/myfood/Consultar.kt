@@ -1,18 +1,13 @@
 package com.example.myfood
 
-import DadosReceita
+import ReceitaDB
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
-import android.widget.ImageButton
-import androidx.cardview.widget.CardView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.consultar_fragment.*
-import kotlinx.android.synthetic.main.consultar_fragment.view.*
-import kotlinx.android.synthetic.main.itens_lista.*
 
 
 class Consultar : Fragment(R.layout.consultar_fragment) {
@@ -35,15 +30,15 @@ class Consultar : Fragment(R.layout.consultar_fragment) {
     }
 
     private fun populateItems() {
-        val dados = DadosReceita
+        val dados = ReceitaDB.dadosReceita
         profileAdapter.setDataSet(dados)
     }
 
     private fun initAdapter() {
 
-        profileAdapter = Adapter(
-            { clickCard() }
-        )
+        profileAdapter = Adapter {receita ->
+            clickCard(receita)
+        }
 
         recyclerlista.layoutManager = LinearLayoutManager(requireContext())
         recyclerlista.adapter = profileAdapter
@@ -51,8 +46,8 @@ class Consultar : Fragment(R.layout.consultar_fragment) {
             //cli
     }
 
-    private fun clickCard() {
-        findNavController().navigate(R.id.consultar_para_detalhes)
+    private fun clickCard(receita: Receita) {
+        findNavController().navigate(ConsultarDirections.consultarParaDetalhes(receita))
     }
 
 }

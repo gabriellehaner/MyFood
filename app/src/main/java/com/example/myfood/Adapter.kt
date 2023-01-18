@@ -1,15 +1,15 @@
 package com.example.myfood
 
-import DadosReceita
+import ReceitaDB
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.itens_lista.view.*
 
-class Adapter (private val onClicked: () -> Unit): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class Adapter (private val onClicked: (Receita) -> Unit): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
-    private lateinit var itens: List<DadosReceita>
+    private lateinit var itens: List<Receita>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
@@ -40,8 +40,8 @@ class Adapter (private val onClicked: () -> Unit): RecyclerView.Adapter<Recycler
         return itens.size
     }
 
-    fun setDataSet (list: DadosReceita){
-        this.itens = listOf(list)
+    fun setDataSet (list: List<Receita>){
+        this.itens = list
     }
 
 
@@ -54,12 +54,12 @@ class Adapter (private val onClicked: () -> Unit): RecyclerView.Adapter<Recycler
 //        val cardView = itemView.cardView
 
 
-        fun bind(DadosReceita: DadosReceita, onClicked: () -> Unit){
-            dadosTitulo.text = DadosReceita.titulo
-            dadosTempo.text = DadosReceita.tempo
+        fun bind(receita: Receita, onClicked: (Receita) -> Unit){
+            dadosTitulo.text = receita.titulo
+            dadosTempo.text = receita.tempo
 
             itemView.setOnClickListener {
-                onClicked()
+                onClicked(receita)
             }
         }
 
