@@ -13,4 +13,10 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Thema.MyfoodTema" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:statusBarColor" type=""> @color/white</item>
+        <item name="android:windowBackground">@drawable/telainicial</item>
+
+    </style>
+
 </resources>

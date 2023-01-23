@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_myfood"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyFood"
+        android:theme="@style/Thema.MyfoodTema"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
