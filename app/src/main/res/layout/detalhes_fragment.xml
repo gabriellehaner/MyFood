@@ -163,6 +163,58 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/receberinngredientes" />
 
+        <Button
+            android:id="@+id/botaoeditartitulo"
+            style="@style/botaoredondo"
+            android:layout_width="21dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="137dp"
+            android:layout_marginBottom="328dp"
+            android:background="@drawable/ic_baseline_create_24"
+            app:layout_constraintBottom_toTopOf="@+id/botaoeditarpreparo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.238"
+            app:layout_constraintStart_toEndOf="@+id/recebertituloreceita"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.025" />
+
+        <Button
+            android:id="@+id/botaoeditartempo"
+            style="@style/botaoredondo"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/ic_baseline_create_24"
+            app:layout_constraintBottom_toTopOf="@+id/botaoeditaringredientes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.238"
+            app:layout_constraintStart_toEndOf="@+id/recebertempodepreparo" />
+
+        <Button
+            android:id="@+id/botaoeditaringredientes"
+            style="@style/botaoredondo"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginBottom="164dp"
+            android:background="@drawable/ic_baseline_create_24"
+            app:layout_constraintBottom_toTopOf="@+id/botaoeditarpreparo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.238"
+            app:layout_constraintStart_toEndOf="@+id/receberinngredientes" />
+
+        <Button
+            android:id="@+id/botaoeditarpreparo"
+            style="@style/botaoredondo"
+            android:layout_width="21dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="314dp"
+            android:background="@drawable/ic_baseline_create_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.238"
+            app:layout_constraintStart_toEndOf="@+id/recebermododepreparo"
+            app:layout_constraintTop_toBottomOf="@+id/botaoeditartitulo" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
