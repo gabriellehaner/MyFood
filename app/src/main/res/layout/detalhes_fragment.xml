@@ -52,10 +52,9 @@
             android:id="@+id/receitaImage"
             android:layout_width="213dp"
             android:layout_height="97dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:src="@drawable/myfood"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
