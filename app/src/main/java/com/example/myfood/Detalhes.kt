@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -34,6 +35,12 @@ class Detalhes : Fragment(R.layout.detalhes_fragment) {
         val receberpreparo = view.findViewById<TextView>(R.id.recebermododepreparo)
         receberpreparo?.text = args.receita.mododepreparo
 
+        val fotoReceita = view.findViewById<ImageView>(R.id.receitaImage)
+        args.receita.foto?.let { foto ->
+            fotoReceita.setImageURI(foto)
+        }
+
+
 
         recebertituloreceita.isEnabled = false
         recebertempodepreparo.isEnabled = false
@@ -53,7 +60,8 @@ class Detalhes : Fragment(R.layout.detalhes_fragment) {
                 titulo = tituloreceita.text.toString(),
                 tempo = temporeceita.text.toString(),
                 ingredientes = receberingredientes.text.toString(),
-                mododepreparo = receberpreparo.text.toString()
+                mododepreparo = receberpreparo.text.toString(),
+                foto = args.receita.foto
             ))
             findNavController().navigate(R.id.detalhes_para_consultar)
         }

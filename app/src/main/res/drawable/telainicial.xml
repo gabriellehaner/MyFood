@@ -6,6 +6,6 @@
    <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/mydfoodiconconsultar"/>
+            android:src="@drawable/testelogo"/>
     </item>
 </layer-list>
